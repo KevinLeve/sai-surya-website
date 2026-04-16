@@ -1,0 +1,368 @@
+/* ================= RESET ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  color:#111827;
+  background:#ffffff;
+  line-height:1.6;
+}
+
+/* ================= CONTAINER ================= */
+.container{
+  width:92%;
+  max-width:1200px;
+  margin:auto;
+}
+
+/* ================= NAVBAR ================= */
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#020617;
+  box-shadow:0 5px 25px rgba(0,0,0,0.4);
+}
+
+.nav-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 0;
+}
+
+.logo{
+  font-weight:600;
+  font-size:1.2rem;
+  color:white;
+}
+
+/* NAV BUTTONS */
+.nav-links a{
+  margin-left:15px;
+  padding:8px 18px;
+  border-radius:999px;
+  text-decoration:none;
+  color:#e5e7eb;
+  font-size:0.9rem;
+  transition:0.3s;
+  border:1px solid rgba(255,255,255,0.2);
+  background:rgba(255,255,255,0.05);
+}
+
+.nav-links a:hover{
+  background:#22c55e;
+  color:white;
+  border-color:#22c55e;
+}
+
+/* ================= HERO ================= */
+.hero{
+  position:relative;
+  padding:130px 0;
+  background:url("hero.jpg") center/cover no-repeat;
+}
+
+/* DARK OVERLAY */
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.65);
+}
+
+/* LEFT DEPTH GRADIENT */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to right,
+    rgba(0,0,0,0.85) 30%,
+    rgba(0,0,0,0.5) 60%,
+    transparent 100%
+  );
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+/* HERO GRID */
+.hero-grid{
+  display:grid;
+  grid-template-columns:340px 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+/* ================= OWNER ================= */
+.owner{
+  text-align:center;
+}
+
+.owner-img{
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  object-fit:cover;
+
+  border:6px solid #22c55e;
+
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.5),
+    0 0 40px rgba(34,197,94,0.6);
+}
+
+.owner-info{
+  margin-top:15px;
+}
+
+.owner h3{
+  font-size:1.3rem;
+  font-weight:600;
+  color:white;
+}
+
+.owner span{
+  color:#22c55e;
+  font-weight:500;
+  display:block;
+  margin-top:4px;
+}
+
+.owner p{
+  margin-top:12px;
+  color:#d1d5db;
+  font-size:0.95rem;
+}
+
+/* ================= GLASS CARD ================= */
+.glass{
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-radius:18px;
+  padding:22px 26px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.35);
+  border:1px solid rgba(255,255,255,0.2);
+}
+
+/* ================= HERO TEXT ================= */
+.hero-box{
+  display:inline-block;
+  padding:30px 35px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);
+  border:1px solid rgba(255,255,255,0.12);
+}
+
+.hero-text h1{
+  font-size:3.2rem;
+  font-weight:700;
+  color:white;
+  margin-bottom:10px;
+}
+
+.hero-text p{
+  color:#e5e7eb;
+  margin-bottom:25px;
+  max-width:520px;
+}
+
+/* ================= BUTTONS ================= */
+.cta{
+  display:flex;
+  gap:15px;
+}
+
+.btn{
+  padding:12px 24px;
+  border-radius:10px;
+  text-decoration:none;
+  font-size:0.95rem;
+  transition:0.3s;
+  font-weight:500;
+}
+
+.primary{
+  background:#22c55e;
+  color:white;
+  box-shadow:0 10px 25px rgba(34,197,94,0.4);
+}
+
+.primary:hover{
+  background:#16a34a;
+}
+
+.secondary{
+  border:1px solid #22c55e;
+  color:#22c55e;
+}
+
+.secondary:hover{
+  background:#22c55e;
+  color:white;
+}
+
+/* ================= SECTIONS ================= */
+section{
+  padding:100px 0;
+}
+
+/* ================= ABOUT ================= */
+.about{
+  background:#ffffff;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about img{
+  width:100%;
+  border-radius:16px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.15);
+}
+
+/* ================= SERVICES ================= */
+.services{
+  background:#f1f5f9;
+  text-align:center;
+}
+
+.service-grid{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.card{
+  background:white;
+  padding:35px;
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-12px);
+  box-shadow:0 25px 50px rgba(0,0,0,0.15);
+}
+
+.card p{
+  color:#6b7280;
+}
+
+/* ================= FOOTER ================= */
+.footer{
+  background:#020617;
+  color:white;
+  text-align:center;
+  padding:60px 0;
+}
+
+/* ================= FINAL MOBILE FIX ================= */
+@media (max-width: 768px){
+
+  html, body{
+    overflow-x:hidden;
+  }
+
+  .container{
+    width:95%;
+  }
+
+  /* NAVBAR */
+  .nav-container{
+    flex-direction:column;
+    gap:12px;
+    text-align:center;
+  }
+
+  .nav-links{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+  }
+
+  /* HERO */
+  .hero{
+    padding:70px 0;
+  }
+
+  .hero-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+    text-align:center;
+  }
+
+  .hero-box{
+    width:100%;
+    padding:18px;
+  }
+
+  /* 🔥 CRITICAL TEXT FIX */
+  .hero-text h1{
+    font-size:1.7rem;
+    line-height:1.3;
+    word-break:break-word;
+  }
+
+  .hero-text p{
+    font-size:0.9rem;
+    padding:0 10px;
+  }
+
+  /* OWNER */
+  .owner-img{
+    width:160px;
+    height:160px;
+  }
+
+  .owner-info{
+    padding:15px;
+  }
+
+  /* BUTTONS */
+  .cta{
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+  }
+
+  .btn{
+    width:85%;
+  }
+
+  /* ABOUT */
+  .about-grid{
+    grid-template-columns:1fr;
+    gap:25px;
+  }
+
+  /* SERVICES */
+  .service-grid{
+    grid-template-columns:1fr;
+  }
+
+  /* FOOTER */
+  .footer-grid{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+}
