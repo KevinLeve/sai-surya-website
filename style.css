@@ -27,7 +27,6 @@ body{
   z-index:100;
   background:#020617;
   box-shadow:0 5px 25px rgba(0,0,0,0.4);
-  position:relative;
 }
 
 .nav-container{
@@ -35,6 +34,7 @@ body{
   justify-content:space-between;
   align-items:center;
   padding:18px 0;
+  position:relative;
 }
 
 .logo{
@@ -43,7 +43,11 @@ body{
   color:white;
 }
 
-/* NAV BUTTONS */
+/* NAV LINKS */
+.nav-links{
+  display:flex;
+}
+
 .nav-links a{
   margin-left:15px;
   padding:8px 18px;
@@ -60,6 +64,14 @@ body{
   background:#22c55e;
   color:white;
   border-color:#22c55e;
+}
+
+/* ================= HAMBURGER ================= */
+#menu-btn{
+  display:none;
+  font-size:1.5rem;
+  color:white;
+  cursor:pointer;
 }
 
 /* ================= HERO ================= */
@@ -164,6 +176,7 @@ body{
   padding:12px 24px;
   border-radius:10px;
   text-decoration:none;
+  font-weight:500;
 }
 
 .primary{
@@ -184,25 +197,15 @@ body{
   padding:60px 0;
 }
 
-/* ================= HAMBURGER ================= */
-#menu-btn{
-  display:none;
-  font-size:1.5rem;
-  color:white;
-  cursor:pointer;
-}
-
 /* ================= MOBILE ================= */
 @media (max-width:768px){
 
+  /* SHOW HAMBURGER */
   #menu-btn{
     display:block;
   }
 
-  .nav-container{
-    position:relative;
-  }
-
+  /* HIDE NORMAL NAV */
   .nav-links{
     position:absolute;
     top:70px;
@@ -219,10 +222,12 @@ body{
     gap:10px;
   }
 
+  /* SHOW MENU */
   .nav-links.show{
     display:flex;
   }
 
+  /* NAV BUTTON STYLE */
   .nav-links a{
     width:100%;
     text-align:center;
@@ -230,6 +235,7 @@ body{
     margin:0;
   }
 
+  /* HERO FIX */
   .hero{
     padding:60px 0;
   }
@@ -244,6 +250,7 @@ body{
     height:200px;
   }
 
+  /* BUTTON STACK */
   .cta{
     flex-direction:column;
     align-items:center;
