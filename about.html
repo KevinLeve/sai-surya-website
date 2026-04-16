@@ -77,12 +77,31 @@ body{
 .hero-content{
   position:relative;
   z-index:2;
-  text-align:center;
   color:white;
 }
 
-.hero-content h1{
-  font-size:2.8rem;
+/* 🔥 FIXED HERO STRUCTURE */
+.hero-text{
+  max-width:700px;
+  margin:auto;
+  text-align:center;
+}
+
+.hero-box{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(14px);
+  border-radius:18px;
+  padding:30px;
+  border:1px solid rgba(255,255,255,0.15);
+}
+
+.hero-text h1{
+  font-size:clamp(2rem, 5vw, 2.8rem);
+}
+
+.hero-text p{
+  margin-top:10px;
+  color:#e5e7eb;
 }
 
 /* ABOUT SECTION */
@@ -204,6 +223,7 @@ body{
 
 /* MOBILE */
 @media(max-width:768px){
+
   .about-grid{
     grid-template-columns:1fr;
   }
@@ -211,6 +231,11 @@ body{
   .gallery-grid{
     grid-template-columns:1fr;
   }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
 }
 
 </style>
@@ -222,18 +247,24 @@ body{
 <header class="navbar">
   <div class="container nav-container">
     <div class="logo">SAI SURYA SDN BHD</div>
-    <nav class="nav-links" id="nav">
+    <nav class="nav-links">
       <a href="index.html">Home</a>
-	<a href="index.html#contact">Contact</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
-    <h1>About Our Company</h1>
-    <p>Driving sustainable recycling solutions in Brunei</p>
+  <div class="container hero-content">
+
+    <div class="hero-text">
+      <div class="hero-box">
+        <h1>About Our Company</h1>
+        <p>Driving sustainable recycling solutions in Brunei</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -295,38 +326,29 @@ body{
   </div>
 </section>
 
-<!-- CONTACT -->
-
-
+<!-- FOOTER -->
 <footer class="footer" id="contact">
-  <div class="container footer-grid">
+  <div class="container" style="text-align:center;">
 
-    <div>
-      <h3>Contact Information</h3>
+    <h3>Contact Information</h3>
 
-      <p>
-        Unit No 5, Block I, Spg 113,<br>
-        Jln Kilanas-Mulaut, Ban 5,<br>
-        Kampung Tanjong Bunut BG1221,<br>
-        Kg Mulaut, Brunei
-      </p>
+    <p>
+      Unit No 5, Block I, Spg 113, Jln Kilanas-Mulaut, Ban 5, Kampung Tanjong Bunut BG1221, Kg Mulaut, Brunei
+    </p>
 
-      <p><strong>Phone:</strong> +673 715 7354</p>
+    <p style="margin-top:10px;">
+      <strong>Phone:</strong> +673 715 7354
+    </p>
 
-      <p>
-        <strong>Working Hours:</strong><br>
-        Monday – Sunday<br>
-        8:00 AM – 6:00 PM
-      </p>
-    </div>
+    <p>
+      <strong>Working Hours:</strong> Monday – Sunday | 8:00 AM – 6:00 PM
+    </p>
 
-    <div>
-      <h3>Get in Touch</h3>
+    <h3 style="margin-top:30px;">Get in Touch</h3>
 
-      <div class="footer-buttons">
-        <a href="tel:+6737157354" class="btn primary">Call Now</a>
-        <a href="https://wa.me/6737157354" class="btn secondary">WhatsApp</a>
-      </div>
+    <div class="footer-buttons" style="justify-content:center;">
+      <a href="tel:+6737157354" class="btn primary">Call Now</a>
+      <a href="https://wa.me/6737157354" class="btn secondary">WhatsApp</a>
     </div>
 
   </div>
@@ -335,6 +357,13 @@ body{
     <p>© 2026 SAI SURYA SDN BHD. All rights reserved.</p>
   </div>
 </footer>
+
+  <div class="footer-bottom">
+    <p>© 2026 SAI SURYA SDN BHD. All rights reserved.</p>
+  </div>
+</footer>
+
 <script src="script.js"></script>
+
 </body>
 </html>
